@@ -1,11 +1,14 @@
 import React, {useState, useEffect, useRef} from "react"
+import "./app.css"
 
 
 function App() {
-    const STARTING_TIME = 5
     
+    
+    
+    const [startingTime,setStartingTime]=useState(5)
     const [text, setText] = useState("")
-    const [timeRemaining, setTimeRemaining] = useState(STARTING_TIME)
+    const [timeRemaining, setTimeRemaining] = useState(startingTime)
     const [isTimeRunning, setIsTimeRunning] = useState(false)
     const [wordCount, setWordCount] = useState(0)
     const textBoxRef = useRef(null)
@@ -22,7 +25,7 @@ function App() {
     
     function startGame() {
         setIsTimeRunning(true)
-        setTimeRemaining(STARTING_TIME)
+        setTimeRemaining(() => startingTime)
         setText("")
         textBoxRef.current.disabled = false
         textBoxRef.current.focus()
@@ -52,6 +55,13 @@ function App() {
                 value={text}
                 disabled={!isTimeRunning}
             />
+            <br/>
+            <label>
+               Set the time (s): 
+               <input
+                type="Number" 
+                onChange={event => setStartingTime(event.target.value)} placeholder={startingTime} name="myTime" />
+            </label>
             <h4>Time remaining: {timeRemaining}</h4>
             <button 
                 onClick={startGame}
