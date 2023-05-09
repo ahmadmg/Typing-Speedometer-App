@@ -43,7 +43,7 @@ h1 {
 
 textarea {
   font-family: 'Press Start 2P', cursive;
-  border: 2px solid rgb(33, 100, 35);
+  border: hidden;
   width: 90%;
   margin: 0 auto;
   outline: none;
