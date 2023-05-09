@@ -1,6 +1,6 @@
 html, body {
-  background: rgb(11, 36, 12);
-  color: #47b147;
+  background: #57CC99;
+  color: #C7F9CC;
   margin:0;
   padding: 0;
   padding-top: 10px;
@@ -17,8 +17,8 @@ body {
 }
 
 #root{
-  background-color: rgb(34, 83, 83);
-  padding: 2em;
+  background-color: #38A3A5;
+  padding: 1em;
   border-radius: 6px;
 }
 button {
@@ -48,11 +48,11 @@ textarea {
   margin: 0 auto;
   outline: none;
   height: 200px;
-  background: #00b800;
+  background: #57CC99;
   padding: 10px;
   border-radius: 5px;
 }
 
 textarea:disabled {
-  background-color: #083017;
+  background-color: #2D7D90;
 }
